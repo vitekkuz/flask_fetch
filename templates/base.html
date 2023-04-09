@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<!--    <script src="{{ url_for('static', filename='my_js.js') }}"></script>-->
+    <script src="{{ url_for('static', filename='btnajax.js') }} " defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="div-header">
+        <h1>Какая-то таблица с номерами</h1>
+    </div>
+</div>
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+<!--<button class="ui-button ui-widget ui-corner-all">A button element</button>-->
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.header {
+    height: 100px;
+    width: 60%;
+}
+.div-header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 60%;
+}
+
+.content table {
+    width: 100%;
+}
+
+td {
+    height: 50px;
+    border: 1px solid;
+    text-align: center;
+
+}
