@@ -17,7 +17,9 @@ btn_send.addEventListener('click', function () {
         if(response.ok) {
             response.json()
             .then(function(response) {
-                console.log(response);
+                console.log(response.title);
+//                alert(response.title)
+                $('.div-header').children().html(`${response.title}`);
 
             });
         }
@@ -28,4 +30,43 @@ btn_send.addEventListener('click', function () {
     .catch(function(error) {
         console.log(error);
     });
+});
+
+function requestSMTH() {
+
+    fetch('/toReadyDocument', {
+        headers : {
+            'Content-Type' : 'application/json'
+        },
+        method : 'POST',
+        body : JSON.stringify( {
+            'name' : 'Rahul Kumar',
+            'country' : 'India'
+        })
+    })
+    .then(function (response){
+
+        if(response.ok) {
+            response.json()
+            .then(function(response) {
+                console.log(response.title);
+//                alert(response.title)
+                $('.div-header').children().html(`${response.title}`);
+
+            });
+        }
+        else {
+            throw Error('Something went wrong');
+        }
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+};
+
+
+$(document).ready(function() {
+    $('.div-header').children().html('Downloading....');
+    requestSMTH();
+
 });

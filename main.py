@@ -18,7 +18,17 @@ def getDataFun():
         jsonData = request.get_json()
         print(jsonData)
         return {
-            'response': 'I am the response'
+            'title': 'Some text after click button'
+        }
+    return render_template('index.html')
+
+@myapp.route('/toReadyDocument', methods=["GET", "POST"])
+def toReadyDocument():
+    if request.method == "POST":
+        jsonData = request.get_json()
+        print(jsonData)
+        return {
+            'title': 'Some text after open the page'
         }
     return render_template('index.html')
 
