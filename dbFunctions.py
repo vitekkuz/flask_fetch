@@ -14,6 +14,7 @@ def get_db_connection():
 
 def init_db():
     conn = get_db_connection()
+    conn.execute('drop table IF EXISTS phone_numbers')
     conn.execute('CREATE TABLE IF NOT EXISTS phone_numbers '
                  '(phone TEXT PRIMARY KEY, name TEXT NOT NULL, email TEXT NOT NULL)')
     conn.close()

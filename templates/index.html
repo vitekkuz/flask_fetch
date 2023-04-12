@@ -2,18 +2,32 @@
 
 {% block title %}Home{% endblock %}
 
-{% block content %}
-        <table>
-    {% for user in phone_data %}
-            <tr>
-                <td>{{user[0] }}</td>
-                <td>{{user[1] }}</td>
-                <td>{{user[2] }}</td>
-            </tr>
-    {% endfor %}
-        </table>
+{% block header %}
+    <div class="div-header">
+        <h1>Какая-то таблица с номерами</h1>
+    </div>
+{% endblock %}
 
-    <button class="send__data__btn">Send Data</button>
-    <p> d {{response }}</p>
+
+{% block content %}
+<table class="my_table">
+    <thead>
+    <tr>
+        <th>Номер</th>
+        <th>Абонент</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <!--    {% for user in phone_data %}-->
+    <!--            <tr>-->
+    <!--                <td>{{user[0] }}</td>-->
+    <!--                <td>{{user[1] }}</td>-->
+    <!--                <td>{{user[2] }}</td>-->
+    <!--            </tr>-->
+    <!--    {% endfor %}-->
+</table>
+
+<button class="send__data__btn ui-button ui-corner-all ui-widget">Change title</button>
+<button class="add__user__btn ui-button ui-corner-all ui-widget">Add user</button>
 
 {% endblock %}

@@ -7,9 +7,13 @@ import sqlite3
 myapp = Flask(__name__, static_folder="static_dir")
 
 
-@myapp.route('/')
+@myapp.route('/main')
 def index():
     return render_template('index.html', phone_data=get_data_from_DB())
+
+@myapp.route('/')
+def logIN():
+    return render_template('login.html')
 
 
 @myapp.route('/sendbtn', methods=["GET", "POST"])
@@ -18,9 +22,10 @@ def getDataFun():
         jsonData = request.get_json()
         print(jsonData)
         return {
-            'title': 'Some text after click button'
+            'title': 'Какое-то другое название'
         }
     return render_template('index.html')
+
 
 @myapp.route('/toReadyDocument', methods=["GET", "POST"])
 def toReadyDocument():
@@ -28,7 +33,8 @@ def toReadyDocument():
         jsonData = request.get_json()
         print(jsonData)
         return {
-            'title': 'Some text after open the page'
+            'title': 'Телефонный справочник',
+            'phone_data': get_data_from_DB(),
         }
     return render_template('index.html')
 

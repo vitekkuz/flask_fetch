@@ -19,15 +19,37 @@ body {
 
 .content {
     width: 60%;
+    align-items: center;
+    display: flex;
+    /* justify-items: center; */
+    flex-direction: column;
+}
+
+#login_form {
+    width: 250px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
 }
 
 .content table {
     width: 100%;
+    padding-bottom: 20px;
 }
+
+.content button {
+    margin: 5px;
+}
+
 
 td {
     height: 50px;
     border: 1px solid;
     text-align: center;
-
+}
+th {
+    height: 50px;
+    border: 1px solid;
+    text-align: center;
 }

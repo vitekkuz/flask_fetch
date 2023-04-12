@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Вход в базу{% endblock %}
+
+{% block content %}
+
+ <form method="post" id="login_form">
+    <label for="login">Login</label><br>
+    <input type="text" id="login" name="login"><br>
+    <label for="passw">Password</label><br>
+    <input type="text"  id="passw" name="passw"></input><br>
+    <input type="submit" class="ui-button ui-corner-all ui-widget" value="Submit">
+  </form>
+
+<a id="login_btn" href="/main" class="button ui-button ui-corner-all ui-widget">Вход</a>
+
+{% endblock %}

@@ -49,9 +49,16 @@ function requestSMTH() {
         if(response.ok) {
             response.json()
             .then(function(response) {
-                console.log(response.title);
+                console.log(response.phone_data);
 //                alert(response.title)
                 $('.div-header').children().html(`${response.title}`);
+
+                $(response.phone_data).each((j, i) => {
+                    let row = $('.my_table').append(`<tr> </tr>`);
+                    row.append(`<td> ${i[0]} </td>`)
+                    row.append(`<td> ${i[1]} </td>`)
+                    row.append(`<td> ${i[2]} </td>`)
+                });
 
             });
         }

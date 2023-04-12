@@ -5,7 +5,7 @@ DATA = [
 		"email": "malesuada.augue@google.net"
 	},
 	{
-		"name": "Griffith Velasquez",
+		"name": "Griffin Velasquez",
 		"phone": "8-645-692-17-82",
 		"email": "bibendum.donec@outlook.org"
 	},
